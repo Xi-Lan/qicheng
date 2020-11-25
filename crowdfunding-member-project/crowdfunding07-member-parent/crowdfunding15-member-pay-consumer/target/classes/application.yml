@@ -1,0 +1,26 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: crowd-pay
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.45.150
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+ali:
+  pay:
+    ali-pay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgEpBg9hmwDjFe/olu+WjBFqGZAKZMBEHF8/cvFu5vCxEoLFr7vi6ll82ciBvap8Y767JTKfZrNlWjBrutMATjp2fwQQwQhTr9u7sjfYC1hsMETC7HgLgKPGiJDVx8oT7PMufqD4CCGnPf66SwsSAVLvZfKSXbeRDBHhuccjvqNLb4TGvTJfrp9BVgIj5T/FHiiNuP51RGSKFuN5N1RjOd4j1+6YHrds+x2fMrPXouFJ6Pr42eOd13XKzMdub5BzQdsHKygurRMo/VxH10gHFcdx6j8J6qRwS8zmMYyajJiZfaYJkdct+sNvuYA+/9MS6mvQ+lHX2a9BNNf55oYbcIQIDAQAB
+    app-id: 2021000120605947
+    charset: utf-8
+    gateway-url: https://openapi.alipaydev.com/gateway.do
+    merchant-private-key: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCG7w3kqZHSDvtGAzr00b9tGUm/HklLkGGC1Z+xesDThgzu1skhCe8Gr/mzsLynxDAn7OI76yqA3BcghsbINPl87zkK6yV5b4TxYgbxhixKYlVN4+lVLNWfmLcpl8hhH8wXyVujIROvjcnUEXi0m21WNIkz06Yuxd/Qs3Xcg4MCMREc/M0PV259z5/ahSA39q06zYkmOF531/yKdJvvcPFs2oUvOoDi/PabHbPQZ1r0Dia1ThfoHg5yzm+dtop4fpUhWhxxpaH4jvFWG0jAw+azpLmWu9l7t7lPokruPiX7RkM+NxzdOO6E/GeQaTGLleDajtdO3h+cTAwIMeP/SWt3AgMBAAECggEAZRPMP386ybUJS4/96Qj6MbqgwLbqRt2X/g8SejuvGISxSXTB46ryT/sgvRdmqvHO9QmBC0uFYlP8SxRK8gyk247EF0bAorAEUWGSO/i7UtlId3mD/5b/S3d1tYWKyB6unx7qM1AC1B4Nk3unBPvtModWQ+mG8kCuAUN9xbsKN2f2x2BqtwLIHo/u/DUAc6b0JLlNuWx2s4m/LULZ3qmfEX3NUK72Z13nchDkkCKRxWc2NMM3IK8iTDUxC7ieZafNtdeXvWquByePLMduE/6VbCddlcHkWZ1vb6ZZ+fiTxXLy6CkRgcQ2eB53LWwKodOZ/v4z8hpkkuYXdIweaJlT2QKBgQDoDngzopt1rc+NwAiaZLOuCvtHqxMF9r1zE/G8r7BW30w6Qrvak5RIexTYcMeWlZRF0loU819mq5ydSMnmFdnqLTxbCFhRwsqIp8BVtxDsOpKD5J6bTeJSe3CofKMt//PEfFsHUz0VrROY3SEjA4ftP4mzd0sQRAxwywAAl6K5gwKBgQCU2zCQ0C80DGk7BYoadA/eai5CfScLhsevDLeooPMmcbnp619EjO3XS2RlVKWM8CVUwpgsNuP3RH+slXDqNREPxjyWG/upMVTt/DNlvba/Eystt3+YQivwBOeNgr4pzpkf/Jd/ksmXwMx1mAy65TJC//U5szdvnscPDpl4oIyH/QKBgQCfZfkJNuPkVKziKIuASjXmEiMC2q8phJAjsQp22pOdSKsaxeY1wPO1Sd5KwkVG2Z5My64XAAmDA9SDcZFF27KhGcuAmF3aY5wtfFUwS5xzN9SWhn6wHTKeB66d/Wc1XMA8MlNw16t47Tct5I8zduRyghd7UDEeji+hdr+cqIwdMwKBgQCSCi2ulaEJ9nczQa8JXv7GnfO+pZyt8VBtTBPPrACBoifc+GAiGAWsKLpZs98r09s8OiIjlsK3MAv2nTMHhIK1sC52swOHLe/+AGXIloT5F2xQUOwszBbhR16JdlDtIVUXjbBwp+mCKdQuNruejQhvtUC4mDx2FReEjTVCpHjbXQKBgQCkHm3Hy+54v5llhdMgpTzEN43NmfTJT9RT9ct3zuQrBCihrUHAUchSM8EuYLXlmxYI4xKzqR6lGQZDkupI3rbQTj/PG9fkPAWMEdN+TQhkOvTffyhEJ8lhIytcPGgcaq5MFTQnZ0NkNxypntGULFbEoTAU/RXH0zoynL3mcTqvaQ==
+    notify-url: http://sawyah.natappfree.cc/pay/notify #会变化
+    return-url: http://localhost/pay/return
+    sign-type: RSA2
